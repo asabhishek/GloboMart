@@ -12,7 +12,7 @@ namespace GloboMart.Data
         public ProductDataContext()
             : base("name=MyContext")
         {
-            Database.SetInitializer<ProductDataContext>(new ProductInitializer());
+            Database.SetInitializer<ProductDataContext>(null);
         }
 
         //public ProductDataContext()
