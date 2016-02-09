@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboMart.Service.Catalogue", "GloboMart.Service.Catalogue\GloboMart.Service.Catalogue.csproj", "{BBFCA147-9B6B-4143-B61C-DDFAC87F7CB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboMart.Data", "GloboMart.Data\GloboMart.Data.csproj", "{63EF40D9-0054-4A25-ACE1-F71D8B9EAE02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboMart.Common", "GloboMart.Common\GloboMart.Common.csproj", "{B7CA2152-65FE-41EE-8BDD-55699ED2D8E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBFCA147-9B6B-4143-B61C-DDFAC87F7CB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBFCA147-9B6B-4143-B61C-DDFAC87F7CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBFCA147-9B6B-4143-B61C-DDFAC87F7CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBFCA147-9B6B-4143-B61C-DDFAC87F7CB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63EF40D9-0054-4A25-ACE1-F71D8B9EAE02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63EF40D9-0054-4A25-ACE1-F71D8B9EAE02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63EF40D9-0054-4A25-ACE1-F71D8B9EAE02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63EF40D9-0054-4A25-ACE1-F71D8B9EAE02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7CA2152-65FE-41EE-8BDD-55699ED2D8E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7CA2152-65FE-41EE-8BDD-55699ED2D8E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7CA2152-65FE-41EE-8BDD-55699ED2D8E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7CA2152-65FE-41EE-8BDD-55699ED2D8E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
