@@ -1,12 +1,15 @@
 ﻿using GloboMart.Common;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GloboMart.Data
 {
+    [Export(typeof(IProductRepository))]
+    [PartCreationPolicy(CreationPolicy.NonShared)]
     public class ProductRepository : DataRepositoryBase<Product, ProductDataContext>, IProductRepository
     {
         protected override Product AddEntity(ProductDataContext entityContext, Product entity)

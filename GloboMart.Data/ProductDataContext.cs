@@ -9,16 +9,16 @@ namespace GloboMart.Data
 {
     public class ProductDataContext : DbContext
     {
-        public ProductDataContext()
-            : base("name=MyContext")
-        {
-            Database.SetInitializer<ProductDataContext>(null);
-        }
-
         //public ProductDataContext()
+        //    : base("name=MyContext")
         //{
-        //    Database.SetInitializer<ProductDataContext>(new ProductInitializer());
+        //    Database.SetInitializer<ProductDataContext>(null);
         //}
+
+        public ProductDataContext()
+        {
+            Database.SetInitializer<ProductDataContext>(new ProductInitializer());
+        }
 
 
         public DbSet<Category> Categories { get; set; }

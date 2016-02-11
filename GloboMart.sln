@@ -1,11 +1,29 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboMart.Service.Catalogue", "GloboMart.Service.Catalogue\GloboMart.Service.Catalogue.csproj", "{BBFCA147-9B6B-4143-B61C-DDFAC87F7CB1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboMart.Data", "GloboMart.Data\GloboMart.Data.csproj", "{63EF40D9-0054-4A25-ACE1-F71D8B9EAE02}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboMart.Common", "GloboMart.Common\GloboMart.Common.csproj", "{B7CA2152-65FE-41EE-8BDD-55699ED2D8E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{675EDE70-4FF6-4CFC-92C4-99E2235E8FD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboMart.Business.Bootstrapper", "GloboMart.Business.Bootstrapper\GloboMart.Business.Bootstrapper.csproj", "{D57B4CBE-DE07-4F72-A39D-8C110E1E8FC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F2427E43-7508-40DB-A0C4-28F3BEB3DAAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{8CBF8BD1-5CF1-431C-83B8-7C0BE0F48370}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{86CA15A8-1C1F-40A6-8A47-897D6265CC97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9A829D9A-A754-496B-8572-BA79CAC4AB79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboMart.UnitTests", "GloboMart.UnitTests\GloboMart.UnitTests.csproj", "{41733BFE-364D-4D82-B024-27DB1BDAFF87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboMart.Core.Common", "GloboMart.Core.Common\GloboMart.Core.Common.csproj", "{C66F2A60-FDCB-4812-B8C1-E890E70D3EBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,8 +43,28 @@ Global
 		{B7CA2152-65FE-41EE-8BDD-55699ED2D8E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7CA2152-65FE-41EE-8BDD-55699ED2D8E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7CA2152-65FE-41EE-8BDD-55699ED2D8E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D57B4CBE-DE07-4F72-A39D-8C110E1E8FC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D57B4CBE-DE07-4F72-A39D-8C110E1E8FC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D57B4CBE-DE07-4F72-A39D-8C110E1E8FC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D57B4CBE-DE07-4F72-A39D-8C110E1E8FC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41733BFE-364D-4D82-B024-27DB1BDAFF87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41733BFE-364D-4D82-B024-27DB1BDAFF87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41733BFE-364D-4D82-B024-27DB1BDAFF87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41733BFE-364D-4D82-B024-27DB1BDAFF87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C66F2A60-FDCB-4812-B8C1-E890E70D3EBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C66F2A60-FDCB-4812-B8C1-E890E70D3EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C66F2A60-FDCB-4812-B8C1-E890E70D3EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C66F2A60-FDCB-4812-B8C1-E890E70D3EBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BBFCA147-9B6B-4143-B61C-DDFAC87F7CB1} = {86CA15A8-1C1F-40A6-8A47-897D6265CC97}
+		{63EF40D9-0054-4A25-ACE1-F71D8B9EAE02} = {8CBF8BD1-5CF1-431C-83B8-7C0BE0F48370}
+		{B7CA2152-65FE-41EE-8BDD-55699ED2D8E9} = {F2427E43-7508-40DB-A0C4-28F3BEB3DAAA}
+		{D57B4CBE-DE07-4F72-A39D-8C110E1E8FC0} = {675EDE70-4FF6-4CFC-92C4-99E2235E8FD2}
+		{41733BFE-364D-4D82-B024-27DB1BDAFF87} = {9A829D9A-A754-496B-8572-BA79CAC4AB79}
+		{C66F2A60-FDCB-4812-B8C1-E890E70D3EBB} = {F2427E43-7508-40DB-A0C4-28F3BEB3DAAA}
 	EndGlobalSection
 EndGlobal
