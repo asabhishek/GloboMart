@@ -1,9 +1,11 @@
-﻿using System;
+﻿using GloboMart.Core.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
+using GloboMart.Business.Bootstrapper;
 
 namespace GloboMart.Service.Catalogue
 {
@@ -12,6 +14,7 @@ namespace GloboMart.Service.Catalogue
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            ObjectBase.Container = MefLoader.Init();
         }
     }
 }

@@ -1,6 +1,8 @@
-﻿using GloboMart.Data;
+﻿using GloboMart.Core.Common;
+using GloboMart.Data;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -10,10 +12,12 @@ namespace GloboMart.Service.Catalogue.Controllers
 {
     public class ProductController : ApiController
     {
+        [Import]
         private IProductRepository _rep;
         public ProductController( )
         {
-            _rep = new ProductRepository();
+           // _rep = new ProductRepository();
+            ObjectBase.Container.SatisfyImportsOnce(this);
         }
         public IEnumerable<Product> Get()
         {
