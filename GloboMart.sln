@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboMart.UnitTests", "Glob
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboMart.Core.Common", "GloboMart.Core.Common\GloboMart.Core.Common.csproj", "{C66F2A60-FDCB-4812-B8C1-E890E70D3EBB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{2AA58B33-D355-4F8A-8FA5-453D335FFEEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboMart.WebApp", "GloboMart.WebApp\GloboMart.WebApp.csproj", "{641CB52F-4465-44B4-AE58-E6819987333B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +59,10 @@ Global
 		{C66F2A60-FDCB-4812-B8C1-E890E70D3EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C66F2A60-FDCB-4812-B8C1-E890E70D3EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C66F2A60-FDCB-4812-B8C1-E890E70D3EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{641CB52F-4465-44B4-AE58-E6819987333B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{641CB52F-4465-44B4-AE58-E6819987333B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{641CB52F-4465-44B4-AE58-E6819987333B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{641CB52F-4465-44B4-AE58-E6819987333B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,5 +74,6 @@ Global
 		{D57B4CBE-DE07-4F72-A39D-8C110E1E8FC0} = {675EDE70-4FF6-4CFC-92C4-99E2235E8FD2}
 		{41733BFE-364D-4D82-B024-27DB1BDAFF87} = {9A829D9A-A754-496B-8572-BA79CAC4AB79}
 		{C66F2A60-FDCB-4812-B8C1-E890E70D3EBB} = {F2427E43-7508-40DB-A0C4-28F3BEB3DAAA}
+		{641CB52F-4465-44B4-AE58-E6819987333B} = {2AA58B33-D355-4F8A-8FA5-453D335FFEEE}
 	EndGlobalSection
 EndGlobal

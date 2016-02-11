@@ -31,18 +31,21 @@ namespace GloboMart.Service.Catalogue.Controllers
         }
 
         // POST: api/Product
-        public void Post([FromBody]string value)
+        public void Post(Product product)
         {
+            _rep.Add(product);
         }
 
         // PUT: api/Product/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(Product product)
         {
+            _rep.Update(product);
         }
 
         // DELETE: api/Product/5
         public void Delete(int id)
         {
+            _rep.Remove(id);
         }
     }
 }

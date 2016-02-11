@@ -25,7 +25,7 @@ namespace GloboMart.Data
         public DbSet<Product> Products { get; set; }
     }
 
-    public class ProductInitializer :  DropCreateDatabaseAlways<ProductDataContext>
+    public class ProductInitializer :  DropCreateDatabaseIfModelChanges<ProductDataContext>
     {
         protected override void Seed(ProductDataContext context)
         {
