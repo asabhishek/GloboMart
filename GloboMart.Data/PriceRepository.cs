@@ -33,7 +33,7 @@ namespace GloboMart.Data
         protected override Price GetEntity(ProductDataContext entityContext, int id)
         {
             var query = (from e in entityContext.Prices
-                         where e.Id == id
+                         where e.ProductId == id
                          select e);
 
             var result = query.FirstOrDefault();

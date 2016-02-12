@@ -16,6 +16,7 @@ namespace GloboMart.Data
         //}
 
         public ProductDataContext()
+            : base("name=MyContext")
         {
             Database.SetInitializer<ProductDataContext>(new ProductInitializer());
         }
@@ -26,32 +27,33 @@ namespace GloboMart.Data
         public DbSet<Price> Prices { get; set; }
     }
 
-    public class ProductInitializer :  DropCreateDatabaseAlways<ProductDataContext>
+    public class ProductInitializer : DropCreateDatabaseIfModelChanges<ProductDataContext>
     {
-        //protected override void Seed(ProductDataContext context)
-        //{
-        //    IList<Category> categories = new List<Category>();
-        //    categories.Add(new Category()
-        //    {
-        //        Id = 1,
-        //        Name = "Mobile",
-        //        Products = new List<Product>
-        //       {
-        //           new Product()
-        //           {
-        //               Id = 1, Name="Samsung Note 2", CategoryId=1, Description="Smart Phone with 2 gb ram and android operating system",
-        //               Prices= new List<Price>
-        //               {new Price(){
-        //                   Id=1, ProductId=1, ActualPrice=30000, OfferPrice=25000
-        //               }
-        //               }
-        //           }
-        //       }
-        //    });
+        protected override void Seed(ProductDataContext context)
+        {
+            IList<Category> categories = new List<Category>();
+            categories.Add(new Category()
+            {
+                Id = 1,
+                Name = "Mobile",
+                Products = new List<Product>
+               {
+                   new Product()
+                   {
+                       Id = 1, Name="Samsung Note 2", CategoryId=1, Description="Smart Phone with 2 gb ram and android operating system",
+                       Prices= new List<Price>
+                       {new Price(){
+                           Id=1, ProductId=1, ActualPrice=30000, OfferPrice=25000
+                       }
+                       }
+                   }
+               }
+            });
 
-        //    foreach (Category ctr in categories)
-        //        context.Categories.Add(ctr);
-        //    base.Seed(context);
+            foreach (Category ctr in categories)
+                context.Categories.Add(ctr);
+            base.Seed(context);
         }
     }
 
+}

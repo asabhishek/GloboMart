@@ -36,10 +36,67 @@ namespace GloboMart.WebApp.Controllers
         }
 
         // GET: Products/Details/5
-        public ActionResult Details(int id)
+        public async Task<ActionResult> Details(int id)
         {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://localhost:50357/");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                HttpResponseMessage response = await client.GetAsync(string.Format("api/product/{0}",id));
+                if (response.IsSuccessStatusCode)
+                {
+                  
+                    Product product = await response.Content.ReadAsAsync<Product>();
+
+                    using (var aclient = new HttpClient())
+                    {
+                        aclient.BaseAddress = new Uri("http://localhost:50357/");
+                        aclient.DefaultRequestHeaders.Accept.Clear();
+                        aclient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                        HttpResponseMessage aresponse = await aclient.GetAsync(string.Format("api/price/{0}", id));
+                        if (aresponse.IsSuccessStatusCode)
+                        {
+
+                            Price price = await aresponse.Content.ReadAsAsync<Price>();
+                            product.price = price;
+                        }
+                    }
+
+                    
+                    return View(product);
+                }
+            }
             return View();
         }
+        [HttpPost]
+    public async Task<ActionResult> RefreshItems(int id) {
+        try 
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://localhost:50357/");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                HttpResponseMessage response = await client.GetAsync(string.Format("api/price/{0}", id));
+                if (response.IsSuccessStatusCode)
+                {
+
+                    Price price = await response.Content.ReadAsAsync<Price>();
+                    return PartialView("_Price", price);
+                }
+            }
+            
+        }
+        catch (Exception ex) {
+
+            return RedirectToAction("Index");
+        }
+        return RedirectToAction("Index");
+    }
 
         // GET: Products/Create
         public ActionResult Create()

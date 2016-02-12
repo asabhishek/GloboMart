@@ -13,7 +13,7 @@ namespace GloboMart.Data
         public int CategoryId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public virtual ICollection<Price> Prices { get; set; }
+        public ICollection<Price> Prices { get; set; }
        
     }
 }

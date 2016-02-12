@@ -14,6 +14,7 @@ namespace GloboMart.Service.Catalogue.Controllers
     {
         [Import]
         private IProductRepository _rep;
+       
         public ProductController( )
         {
            // _rep = new ProductRepository();
@@ -25,11 +26,12 @@ namespace GloboMart.Service.Catalogue.Controllers
         }
 
         // GET: api/Product/5
-        public string Get(int id)
+        public object Get(int id)
         {
-            return "value";
+            return _rep.Get(id);
         }
 
+     
         // POST: api/Product
         public void Post(Product product)
         {

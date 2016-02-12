@@ -11,6 +11,7 @@ namespace GloboMart.WebApp.Models
         public int CategoryId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-       
+
+        public Price price { get; set; }
     }
 }
